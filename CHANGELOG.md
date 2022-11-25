@@ -1,3 +1,3 @@
 ## 0.0.1
 
-* TODO: Describe initial release.
+* Initial release: Included receiving (non-hidden) windows as well as (force) activating them using `showWindow`

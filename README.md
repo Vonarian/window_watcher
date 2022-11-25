@@ -1,39 +1,36 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# Window Watcher
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+Flutter/Dart Windows package using [win32 functions](https://pub.dev/packages/win32) to get information about windows and manipulating them.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+Fast and easy access to window titles, their hWnds and whether a window is the active window or not.
+Activate(show) a window by calling `show()` on any of the listed windows.
 
-## Getting started
+## Installation
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+In the `dependecies` section of your `pubspec.yaml`, add the following line:
+```yaml
+    dependencies:
+      window_watcher: <latest_version>
+```
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+Get list of all (non-hidden) windows using the following code:
 
 ```dart
-const like = 'sample';
+import 'package:window_watcher/window_watcher.dart';
+
+Future<void> main() async {
+  final List<Window> windows = await WindowWatcher.getWindows(); //Get list of visible windows
+  for (Window window in windows){ //Show visible windows one by one with 1 second delay
+    window.show(); //With additional forced flag
+    await Future.delayed(const Duration(seconds: 1));
+  }
+}
 ```
 
-## Additional information
+## Additional Information
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+This package is using [win32](https://pub.dev/packages/win32) and inspiring (most of) its functionalities from [Tabame by Far-Se](https://github.com/Far-Se/tabame/)

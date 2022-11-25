@@ -1,3 +1,4 @@
+///A Dart/Flutter package for working with visible windows developed for Windows machines.
 library window_watcher;
 
 import 'dart:ffi';
@@ -11,7 +12,9 @@ export 'get_windows/window.dart';
 
 final List<Window> _list = [];
 
+///Main class containing function(s) for working with windows.
 class WindowWatcher {
+  ///Get list of visible windows.
   static Future<List<Window>> getWindows() async {
     if (_list.isNotEmpty) {
       _list.removeRange(0, _list.length);
