@@ -1,7 +1,7 @@
 name: window_watcher
-description: Dart/Flutter package for getting information about windows.
+description: Dart/Flutter package for working with visible windows.
 version: 0.0.1
-homepage: https://github.com/Vonarian/window_watcher
+repository: https://github.com/Vonarian/window_watcher
 
 environment:
   sdk: '>=2.18.0 <3.0.0'
