@@ -23,12 +23,24 @@ Get list of all (non-hidden) windows using the following code:
 import 'package:window_watcher/window_watcher.dart';
 
 Future<void> main() async {
-  final List<Window> windows = await WindowWatcher.getWindows(); //Get list of visible windows
-  for (Window window in windows){ //Show visible windows one by one with 1 second delay
-    window.show(); //With additional forced flag
-    await Future.delayed(const Duration(seconds: 1));
-  }
+  final List<Window> windows = await WindowWatcher.getWindows(getExe: true); //Get list of visible windows as well as their executable path
 }
+```
+
+Show an specific window:
+```dart
+  final window = windows.firstWhere((e) => e.title.contains('Chrome'));
+  window.show(forced: true);
+```
+
+Get/Update executable path of a window.
+
+```dart
+  final window = windows.firstWhere((e) => e.title.contains('Chrome'));
+  if (window.exePath == null) {
+    window.getExePath();
+    print(window.exePath);
+  }
 ```
 
 ## Additional Information
