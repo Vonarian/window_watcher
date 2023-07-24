@@ -3,7 +3,6 @@ import 'dart:ffi';
 import 'package:ffi/ffi.dart';
 import 'package:win32/win32.dart';
 
-import '../models/imports.dart';
 
 /// Class containing information about a window and related functions.
 class Window {

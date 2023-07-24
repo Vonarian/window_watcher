@@ -8,7 +8,6 @@ import 'package:ffi/ffi.dart';
 import 'package:win32/win32.dart';
 
 import 'get_windows/window.dart';
-import 'models/imports.dart';
 
 export 'get_windows/window.dart';
 

@@ -1,23 +1,20 @@
 name: window_watcher
 description: Dart/Flutter package for working with visible windows.
-version: 0.0.2
+version: 0.0.3
 repository: https://github.com/Vonarian/window_watcher
+issue_tracker: https://github.com/Vonarian/window_watcher/issues
 
 environment:
-  sdk: '>=2.18.0 <3.0.0'
-  flutter: ">=1.17.0"
+  sdk: '>=3.0.6 <4.0.0'
 
 platforms:
   windows:
 
 dependencies:
-  flutter:
-    sdk: flutter
-  win32: ^3.1.1
+  win32: ^5.0.5
   ffi: ^2.0.1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
-
-flutter:
