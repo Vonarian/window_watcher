@@ -5,7 +5,7 @@ repository: https://github.com/Vonarian/window_watcher
 issue_tracker: https://github.com/Vonarian/window_watcher/issues
 
 environment:
-  sdk: '>=3.0.6 <4.0.0'
+  sdk: '>=3.0.6'
 
 platforms:
   windows:
